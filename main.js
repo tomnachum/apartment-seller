@@ -19,6 +19,7 @@ $("button").on("click", function () {
 
 const renderApts = function (apartments) {
   $("#results").empty();
+  console.log(apartments);
   const source = $("#apartments-template").html();
   const template = Handlebars.compile(source);
   const newHTML = template({ apartments });

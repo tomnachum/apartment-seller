@@ -86,8 +86,17 @@
               <i class="material-icons parking">local_parking</i>
             {{/if}}
             {{#if immediate}}
-              <p>{{contactDetails.name}} {{contactDetails.email}}</p>
+              <p class="label l-name">Name</p>
+              <p class="name">{{contactDetails.name}} </p>
+              <p class="label l-email">Email</p>
+              <p class="email">{{contactDetails.email}}</p>
             {{/if}}
+            <p class="label l-features">Features</p>
+            <ul class="features">
+              {{#each features}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
           </div>
         {{/each}}
       {{else}}

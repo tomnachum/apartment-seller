@@ -67,7 +67,10 @@ label {
     "i la a"
     "i lpr p"
     "i lr r"
-    "i lpark park";
+    "i lpark park"
+    "i lf f"
+    "i ln n"
+    "i le e";
   box-shadow: 1px 1px 3px #0a1612;
   margin: 20px;
   padding: 20px;
@@ -160,4 +163,28 @@ button:active {
   padding: 10px;
   border-radius: 5px;
   font-family: "Raleway", sans-serif;
+}
+
+.l-features {
+  grid-area: lf;
+}
+
+.features {
+  grid-area: f;
+}
+
+.l-name {
+  grid-area: ln;
+}
+
+.name {
+  grid-area: n;
+}
+
+.l-email {
+  grid-area: le;
+}
+
+.email {
+  grid-area: e;
 }
