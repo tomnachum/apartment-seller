@@ -13,6 +13,11 @@
       href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
     />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
@@ -65,10 +70,30 @@
 
     <div id="results"></div>
 
-    <!-- Your Code Here -->
-    <!-- You should start doing handlebar stuff here -->
-    <!-- Your Code Here -->
-    <h2>hi</h2>
+    <script id="apartments-template" type="text/x-handlebars-template">
+      {{#if apartments}}
+        {{#each apartments}}
+          <div class="result">
+            <img src="{{img}}" />
+            <p class="label l-addr">Address</p>
+            <p class="address">{{address}}</p>
+            <p class="label l-price">Price</p>
+            <p class="price">{{price}}</p>
+            <p class="label l-rooms">Rooms</p>
+            <p class="rooms">{{rooms}}</p>
+            {{#if parking}}
+              <p class="label l-park">Parking</p>
+              <i class="material-icons parking">local_parking</i>
+            {{/if}}
+            {{#if immediate}}
+              <p>{{contactDetails.name}} {{contactDetails.email}}</p>
+            {{/if}}
+          </div>
+        {{/each}}
+      {{else}}
+        <h1 class="no-match">There are no matching results.</h1>
+      {{/if}}
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
