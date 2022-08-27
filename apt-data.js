@@ -65,6 +65,6 @@ const apartments = [
       name: "Trevor",
       email: "t@noah.ark",
     },
-    features: ["first floor", "AC"],
+    features: [],
   },
 ];

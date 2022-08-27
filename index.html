@@ -88,11 +88,15 @@
               <p class="parking">No parking</p>
             {{/if}}
             <p class="label l-features">Features</p>
-            <ul class="features">
-              {{#each features}}
-                <li>{{this}}</li>
-              {{/each}}
-            </ul>
+            {{#if features}}
+              <ul class="features">
+                {{#each features}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            {{else}}
+              <p class="features">No features</p>
+            {{/if}}
             <p class="label l-contact">Contact</p>
             {{#if immediate}}
               <p class="contact">{{contactDetails.name}},
