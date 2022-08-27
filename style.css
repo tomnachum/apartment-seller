@@ -69,8 +69,7 @@ label {
     "i lr r"
     "i lpark park"
     "i lf f"
-    "i ln n"
-    "i le e";
+    "i lc c";
   box-shadow: 1px 1px 3px #0a1612;
   margin: 20px;
   padding: 20px;
@@ -173,18 +172,10 @@ button:active {
   grid-area: f;
 }
 
-.l-name {
-  grid-area: ln;
+.l-contact {
+  grid-area: lc;
 }
 
-.name {
-  grid-area: n;
-}
-
-.l-email {
-  grid-area: le;
-}
-
-.email {
-  grid-area: e;
+.contact {
+  grid-area: c;
 }

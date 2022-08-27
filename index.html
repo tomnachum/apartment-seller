@@ -81,15 +81,11 @@
             <p class="price">{{price}}</p>
             <p class="label l-rooms">Rooms</p>
             <p class="rooms">{{rooms}}</p>
+            <p class="label l-park">Parking</p>
             {{#if parking}}
-              <p class="label l-park">Parking</p>
               <i class="material-icons parking">local_parking</i>
-            {{/if}}
-            {{#if immediate}}
-              <p class="label l-name">Name</p>
-              <p class="name">{{contactDetails.name}} </p>
-              <p class="label l-email">Email</p>
-              <p class="email">{{contactDetails.email}}</p>
+            {{else}}
+              <p class="parking">No parking</p>
             {{/if}}
             <p class="label l-features">Features</p>
             <ul class="features">
@@ -97,6 +93,13 @@
                 <li>{{this}}</li>
               {{/each}}
             </ul>
+            <p class="label l-contact">Contact</p>
+            {{#if immediate}}
+              <p class="contact">{{contactDetails.name}},
+                {{contactDetails.email}}</p>
+            {{else}}
+              <p class="contact">Not available</p>
+            {{/if}}
           </div>
         {{/each}}
       {{else}}
